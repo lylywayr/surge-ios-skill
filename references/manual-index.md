@@ -44,7 +44,7 @@
 - [Trojan](https://manual.nssurge.com/policies/trojan.html)
 - [TUIC](https://manual.nssurge.com/policies/tuic.html)
 - [Hysteria 2](https://manual.nssurge.com/policies/hysteria2.html)
-- [VLESS](https://manual.nssurge.com/policies/vless.html) — iOS 6.0.0+；RAW / WS / gRPC / XHTTP，REALITY 与 XTLS Vision
+- [VLESS](https://manual.nssurge.com/policies/vless.html) — iOS 6.0.0+；RAW / WS / gRPC / XHTTP，REALITY 与 XTLS Vision。REALITY 模式不写 `tls=true`，也没有 fingerprint/uTLS 参数
 - [WireGuard](https://manual.nssurge.com/policies/wireguard.html)
 - [Tailscale](https://manual.nssurge.com/policies/tailscale.html)
 
