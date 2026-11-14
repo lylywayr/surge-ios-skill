@@ -15,6 +15,8 @@ surge-cli --raw geoip 1.1.1.1
 - `rule explain`：查看完整策略组决策路径；回答“为什么这样走”时优先使用。
 - `http probe <url> [policy]` 会发送真实 HEAD 请求，只在需要端到端验证时使用。
 
+DNS 污染与加密 DNS：DoH/DoT 只解决隐私和链路篡改，不等于抗污染。实测国内 DoH 端点（`doh.pub`、`dns.alidns.com`）对部分境外域名仍返回污染结果（Google 域名落到 Facebook/Twitter 段），换成 DoH 后不要假设解析已干净。判断污染用 `dns lookup` / `dns trace` 看实际应答，必要时与直连 UDP DNS、其他网络的结果对比；确认污染后改走代理侧解析或加密 DNS 到境外端点。
+
 需要改变路由才能验证、且用户授权时，优先考虑临时规则而非改 Profile；临时规则立即生效并优先于 Profile 规则。先列出已有规则，记录本次新增项。
 
 ```sh

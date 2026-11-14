@@ -3,7 +3,7 @@
 Surge iOS 的 Minis 技能：让 AI agent 通过 Surge 的 HTTP API（MCP）检查和控制 Surge。
 
 - 后端：`POST /v1/mcp`（JSON-RPC，X-Key 鉴权），默认 `http://127.0.0.1:6171`
-- 实测版本：Surge 6.100.0 (4019)，Controller Protocol **41**，**61 个 MCP 工具**
+- 实测版本：Surge 6.100.0 (4026)，Controller Protocol **41**，**61 个 MCP 工具**
 - 派生自 Surge Mac 应用自带的官方技能（`Surge.app/Contents/Resources/Skills/surge`），做了 iOS 适配
 
 ## 安装（Minis）
@@ -34,13 +34,17 @@ surge-cli module get <模块名>
 surge-cli capture sessions
 ```
 
-完整命令见 `SKILL.md`，61 个 MCP 工具见 `references/mcp-tools.md`。
+完整命令见 `SKILL.md`，61 个 MCP 工具见 `references/mcp-tools.md`，规则集选源与 DOMAIN-SET 见 `references/rulesets.md`。
 
 ## iOS 限制
 
 - 无模块卸载端点（只能 App 内左滑删除）
 - 无 `plugin` / `vmnet` / `device` / `profile list|check` / `managed-profile`
 - Profile 只能按节读写（`profile section get|set`），整份文件不支持写入
+
+## 更新记录
+
+- 2026-11-14：`profile section get` 返回 `{"content":...}`、BOM 文件的回写坑；`--check` 在线校验器落后于 TF 构建；新增规则集参考 `references/rulesets.md`；DoH 不抗污染实测
 
 ## 同步官方技能
 

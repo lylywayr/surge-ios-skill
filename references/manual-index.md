@@ -8,7 +8,7 @@
 2. `surge-cli` / Controller 命令、参数和响应：查阅本 Skill 的 [Command Reference](command-reference.md)。
 3. 若保存的具体页面失效，从手册首页或侧栏目录重新定位；不要猜测 URL，也不要先用搜索引擎摘要代替官方正文。
 
-`surge-cli --check` 的上传风险见 SKILL.md；有 Mac 时可用 `/Applications/Surge.app/Contents/Applications/surge-cli --check <path>` 本地校验，不上传。
+`surge-cli --check` 的上传风险见 SKILL.md；有 Mac 时可用 `/Applications/Surge.app/Contents/Applications/surge-cli --check <path>` 本地校验，不上传。没有 Mac 时注意在线校验器版本落后于 TF 构建，vless 等新语法会被误报，本机能力以 `profile section set` 回写实测为准。
 
 ## 常用配置入口
 
@@ -44,6 +44,7 @@
 - [Trojan](https://manual.nssurge.com/policies/trojan.html)
 - [TUIC](https://manual.nssurge.com/policies/tuic.html)
 - [Hysteria 2](https://manual.nssurge.com/policies/hysteria2.html)
+- [VLESS](https://manual.nssurge.com/policies/vless.html) — iOS 6.0.0+；RAW / WS / gRPC / XHTTP，REALITY 与 XTLS Vision
 - [WireGuard](https://manual.nssurge.com/policies/wireguard.html)
 - [Tailscale](https://manual.nssurge.com/policies/tailscale.html)
 
